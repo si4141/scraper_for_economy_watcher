@@ -13,9 +13,9 @@ setup(
     description='Web scraper to get economy watcher data from Cabinet Office of Japan.',
     long_description=readme,
     author='Yuta Sugiura',
-    author_email='soeur.si.4141@gmail.com',
+    author_email='ced4141@me.com',
     install_requires=['numpy'],
-    url='',
+    url='https://github.com/si4141/scraper_for_economy_watcher',
     license=license_,
     packages=find_packages(exclude=('tests', 'docs'))
 )
