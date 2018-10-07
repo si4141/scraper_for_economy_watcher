@@ -2,6 +2,7 @@
 
 Data reader for Economy Wacher Survey provided by Cabinet Office of Japan.
 Data return as pandas.DataFrame.
+It can get only current data provided [here](http://www5.cao.go.jp/keizai3/watcher-e/index-e.html) now, but is under developing to expand available data range.
 
 # Dependency
 Comming soon.
