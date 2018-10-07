@@ -47,13 +47,17 @@ def clean_field_column(watcher_file_with_field: pd.DataFrame):
     :param watcher_file_with_field:
     :return:
     """
+    if not 'region' in watcher_file_with_field.columns:
+        logger.warning('Passed DataFrame does not have `region`. '
+                       'This method assumed to be called after creating `region` column.')
+
     watcher_file_with_field = watcher_file_with_field.assign(
         field=lambda x: x.field.str.replace(r'(\(.*?\))','').str.strip()
     )
     return watcher_file_with_field
 
 
-def make_region_column(watcher_file: pd.DataFrame, iloc_field: int):
+def make_region_column(watcher_file_with_field: pd.DataFrame):
     """
     Make region column from field column.
     Because the value in the field column has region name in parenthesis like `Field Name`(),
@@ -61,11 +65,10 @@ def make_region_column(watcher_file: pd.DataFrame, iloc_field: int):
     So, this method might not work if the format of raw data would be changed.
 
     :param watcher_file:
-    :param iloc_field:
     :return:
     """
-    watcher_file = watcher_file.assign(
-        region=lambda x: x.iloc[:, iloc_field].str.extract(r'((?<=\().*?(?=\)))')
+    watcher_file = watcher_file_with_field.assign(
+        region=lambda x: x.field.str.extract(r'((?<=\().*?(?=\)))')
     )
     return watcher_file
 
