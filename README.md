@@ -1,4 +1,4 @@
-# scraper_for_economy_watcher
+# DataReader for Economy Watcher Survey
 
 Data reader for Economy Wacher Survey provided by Cabinet Office of Japan.
 Data return as pandas.DataFrame.
@@ -21,4 +21,9 @@ MIT License
 Yuta Sugiura
 
 # References
-Comming soon
+[Cabinet Office](http://www.cao.go.jp)
+[Economy Watcher Survey](http://www5.cao.go.jp/keizai3/watcher/watcher_menu.html
+
+English is bery diffikalt.
+[Google translate](https://translate.google.co.jp)
+[Weblio](https://www.weblio.jp)
