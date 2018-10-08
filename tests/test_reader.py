@@ -1,10 +1,10 @@
 import unittest
 import pandas as pd
 import numpy as np
-from scraper_for_economy_watchcer.reader import EconomyWatcherReader
+from econ_watcher_reader.reader import EconomyWatcherReader
 import logging
 logging.basicConfig()
-logging.getLogger("scraper_for_economy_watchcer.reader").setLevel(level=logging.DEBUG)
+logging.getLogger("econ_watcher_reader.reader").setLevel(level=logging.DEBUG)
 
 
 class TestReaderCurrent(unittest.TestCase):
@@ -100,7 +100,7 @@ class TestReaderFuture(unittest.TestCase):
         reader = EconomyWatcherReader()
         data = reader.get_data('current')
 
-        date_in_data_str = ['{:%Y%m%d}'.format(date_) for date_ in data.date.unique()]
+        date_in_data_str = ['{:%Y%m%d}'.format(pd.to_datetime(date_)) for date_ in data.date.unique()]
         self.assertIn('{:%Y%m%d}'.format(reader.EARLIEST_MONTH), date_in_data_str)
         self.assertIn('{:%Y%m%d}'.format(reader.LATEST_MONTH), date_in_data_str)
         self.assertGreater(len(date_in_data_str), 2)

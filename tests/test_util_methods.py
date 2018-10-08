@@ -1,13 +1,13 @@
 import unittest
-from settings import WATCHER_DISTRIBUTE_DIRECTORY, TOP_MENU_PAGE, WatcherType, TOKYO_FLAG_VALUE_IN_RAW_DATA
+from settings import TOP_MENU_PAGE, WatcherType, TOKYO_FLAG_VALUE_IN_RAW_DATA
 import re
 import numpy as np
-from scraper_for_economy_watchcer.scraper import get_watcher_directory, get_watcher_file,\
+from econ_watcher_reader.scraper import get_watcher_directory, get_watcher_file,\
     get_publish_date_from_url
-import scraper_for_economy_watchcer.parser as parser
+import econ_watcher_reader.parser as parser
 import logging
 logging.basicConfig()
-logging.getLogger("scraper_for_economy_watchcer").setLevel(level=logging.DEBUG)
+logging.getLogger("econ_watcher_reader").setLevel(level=logging.DEBUG)
 
 
 class TestScraper(unittest.TestCase):
