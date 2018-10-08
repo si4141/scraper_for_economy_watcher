@@ -21,9 +21,13 @@ MIT License
 Yuta Sugiura
 
 # References
-[Cabinet Office](http://www.cao.go.jp)
-[Economy Watcher Survey](http://www5.cao.go.jp/keizai3/watcher/watcher_menu.html
+
+Data Sorce
+
+- [Cabinet Office](http://www.cao.go.jp)
+- [Economy Watcher Survey](http://www5.cao.go.jp/keizai3/watcher/watcher_menu.html)
 
 English is bery diffikalt.
-[Google translate](https://translate.google.co.jp)
-[Weblio](https://www.weblio.jp)
+
+- [Google translate](https://translate.google.co.jp)
+- [Weblio](https://www.weblio.jp)
