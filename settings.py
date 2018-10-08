@@ -6,10 +6,6 @@ OLD_MENU_PAGE = 'http://www5.cao.go.jp/keizai3/kako_watcher.html'
 WATCHER_DISTRIBUTE_DIRECTORY = 'http://www5.cao.go.jp/keizai3/'
 TOKYO_FLAG_VALUE_IN_RAW_DATA = '東京都'
 
-DATA_STORE = os.path.join(os.path.dirname(__file__), 'data_store/')
-
-KNOWN_SENTENCE_NOISE = ['・']
-
 
 class WatcherType(Enum):
     Current = ('watcher4.csv', 2, 1, 0, 3, 4, 5)
