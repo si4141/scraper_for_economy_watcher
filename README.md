@@ -10,6 +10,7 @@ Developping in python 3.7.
 
 # Usage
 ```python
+from econ_watcher_reader import EconomyWatcherReader
 reader = EconomyWatcherReader()
 data = reader.get_data(kind_='current', start=datetime.datetime(2018, 1, 1), end=datetime.datetime(2018, 5, 1))
 ```
