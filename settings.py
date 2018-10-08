@@ -13,7 +13,7 @@ KNOWN_SENTENCE_NOISE = ['・']
 
 class WatcherType(Enum):
     Current = ('watcher4.csv', 2, 1, 0, 3, 4, 5)
-    Future = ('watcher5.csv', 2, 1, 0, 3, 4, 5)
+    Future = ('watcher5.csv', 2, 1, 0, 3, None, 4)
     CurrentKoshinetsu = ('watcher6.csv', 0, None, 0, 3, 4, 5)
     FutureKoshinetsu = ('watcher7.csv', 0, None, 0, 3, 4, 5)
 
@@ -33,6 +33,28 @@ class WatcherType(Enum):
         self.__iloc_industry = iloc_industry
         self.__iloc_reason_type = iloc_reason_type
         self.__iloc_reason_sentence = iloc_reason_sentence
+
+    def get_name_from_iloc(self, iloc:int):
+        """
+        Mapper method to get name from iloc.
+
+        :param int iloc: number of index.
+        :return: column name
+        """
+        if iloc == self.iloc_economic_status_score:
+            return 'score'
+        elif iloc == self.iloc_is_tokyo_flag:
+            return 'is_tokyo'
+        elif iloc == self.iloc_field:
+            return 'field'
+        elif iloc == self.iloc_industry:
+            return 'industry'
+        elif iloc == self.iloc_reason_type:
+            return 'reason_type'
+        elif iloc == self.iloc_reason_sentence:
+            return 'reason_sentence'
+        else:
+            return None
 
     @property
     def score_map(self) ->dict:

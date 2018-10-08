@@ -22,16 +22,16 @@ class EconomyWatcherReader(object):
         1. Delete newline code, such as `\n` or `\r`. [done]
         1. Flag rows about Tokyo. [done]
         1. Make field column. Fill value field column of raw data. [done]
-        1. Make Region column. [done] # TODO: Koshinetu specific function
+        1. Make Region column. [done] # TODO: Koshinetsu specific function
         1. Clean field column. [done]
-        1. Convert economic state score to integer, from 0 to 4. [done] # TODO: Koshinetu specific function
+        1. Convert economic state score to integer, from 0 to 4. [done] # TODO: Koshinetsu specific function
         1, Eliminate rows without sentence. [done]
         1. Clean reason sentence. delete center dot at the head. [done]
     1. Organizing
-        1. Name column to use. TODO
+        1. Name column to use. [done]
             - For industry, reason_type, raw data are used.
             - For score, reason_sentence, field, region, columns defined in parse module used.
-        1. Make date columns. This is not the same as publish date. TODO
+        1. Make date columns. This is not the same as publish date. [done]
     """
 
     def __init__(self):
@@ -114,6 +114,8 @@ class EconomyWatcherReader(object):
         watcher_types = self.__define_watcher_type(kind_)
         for watcher_type in watcher_types:
             for month in data_range_to_get:
+                logger.info('read data at: {:%B-%y}'.format(month))
+
                 # Get raw data from the we site of Cabinet Office
                 data_to_parse = scraper.get_watcher_file(
                     self.__map_month_to_url[month],
@@ -179,8 +181,9 @@ class EconomyWatcherReader(object):
         )
 
         # rename raw data column
-        parsed_data.rename(columns={raw_data_column[0]: 'industry', raw_data_column[1]: 'reason_type'}, inplace=True)
-
+        # parsed_data.rename(columns={raw_data_column[0]: 'industry', raw_data_column[1]: 'reason_type'}, inplace=True)
+        parsed_data.rename(columns={iloc:watcher_type.get_name_from_iloc(iloc) for iloc in raw_data_column}, inplace=True)
+        logger.debug('{}'.format(parsed_data.dtypes))
         return parsed_data
 
     @property
