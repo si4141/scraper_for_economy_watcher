@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-with open('README.rst') as f:
+with open('README.md') as f:
     readme = f.read()
 
 with open('LICENSE') as f:
@@ -14,7 +14,7 @@ setup(
     long_description=readme,
     author='Yuta Sugiura',
     author_email='ced4141@me.com',
-    install_requires=['numpy'],
+    install_requires=['numpy', 'pandas', 'xlrd', 'requests', 'bs4'],
     url='https://github.com/si4141/scraper_for_economy_watcher',
     license=license_,
     packages=find_packages(exclude=('tests', 'docs'))
