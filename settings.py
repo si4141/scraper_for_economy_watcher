@@ -1,4 +1,3 @@
-import os.path
 from enum import Enum
 
 TOP_MENU_PAGE = 'http://www5.cao.go.jp/keizai3/watcher_index.html'
