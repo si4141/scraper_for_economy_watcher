@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from settings import TOKYO_FLAG_VALUE_IN_RAW_DATA
+from econ_watcher_reader.settings import TOKYO_FLAG_VALUE_IN_RAW_DATA
 from logging import getLogger
 logger = getLogger(__name__)
 

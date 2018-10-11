@@ -1,5 +1,5 @@
 import unittest
-from settings import TOP_MENU_PAGE, WatcherType, TOKYO_FLAG_VALUE_IN_RAW_DATA
+from econ_watcher_reader.settings import TOP_MENU_PAGE, WatcherType, TOKYO_FLAG_VALUE_IN_RAW_DATA
 import re
 import numpy as np
 from econ_watcher_reader.scraper import get_watcher_directory, get_watcher_file,\

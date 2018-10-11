@@ -1,4 +1,4 @@
-from settings import TOP_MENU_PAGE, WatcherType
+from econ_watcher_reader.settings import TOP_MENU_PAGE, WatcherType
 import pandas as pd
 import datetime
 from econ_watcher_reader import scraper, parser

@@ -1,5 +1,5 @@
 import requests
-from settings import WATCHER_DISTRIBUTE_DIRECTORY
+from econ_watcher_reader.settings import WATCHER_DISTRIBUTE_DIRECTORY
 from bs4 import BeautifulSoup
 import pandas as pd
 import os.path
