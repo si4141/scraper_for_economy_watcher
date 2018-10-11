@@ -8,10 +8,11 @@ with open('LICENSE') as f:
     license_ = f.read()
 
 setup(
-    name='data_reader_for_economy_watcher',
+    name='econ_watcher_reader',
     version='0.0.1',
     description='Web scraper to get economy watcher data from Cabinet Office of Japan.',
     long_description=readme,
+    long_description_content_type="text/markdown",
     author='Yuta Sugiura',
     author_email='ced4141@me.com',
     install_requires=['numpy', 'pandas', 'xlrd', 'requests', 'bs4'],
