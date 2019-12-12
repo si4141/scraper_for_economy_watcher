@@ -1,8 +1,8 @@
 from enum import Enum
 
-TOP_MENU_PAGE = 'http://www5.cao.go.jp/keizai3/watcher_index.html'
-OLD_MENU_PAGE = 'http://www5.cao.go.jp/keizai3/kako_watcher.html'
-WATCHER_DISTRIBUTE_DIRECTORY = 'http://www5.cao.go.jp/keizai3/'
+TOP_MENU_PAGE = 'https://www5.cao.go.jp/keizai3/watcher_index.html'
+OLD_MENU_PAGE = 'https://www5.cao.go.jp/keizai3/kako_watcher.html'
+WATCHER_DISTRIBUTE_DIRECTORY = 'https://www5.cao.go.jp/keizai3/'
 TOKYO_FLAG_VALUE_IN_RAW_DATA = '東京都'
 
 
