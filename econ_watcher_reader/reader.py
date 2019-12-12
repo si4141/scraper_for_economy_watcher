@@ -53,7 +53,7 @@ class EconomyWatcherReader(object):
         logger.debug('publish_date_list: {}'.format(publish_date_list))
 
         self.__AVAILABLE_PERIOD = pd.Series(
-            [self.__set_datetime_month_to_one(month) - pd.offsets.MonthBegin(2) for month in publish_date_list]
+            [self.__set_datetime_month_to_one(month) - pd.offsets.MonthBegin(1) for month in publish_date_list]
         )
         logger.debug('AVAILABLE_PERIOD: {}'.format(self.__AVAILABLE_PERIOD.tolist()))
 
